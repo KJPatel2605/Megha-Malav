@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Login Page</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Login</button>
+            
+            
+        </form>
+        <p id="error-message" style="color: red;"></p>
+    </div>
+
+    <a href="index.html" class="login-button">Back Home</a> <br>
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            var formData = new FormData(this);
+            var scriptURL = "https://script.google.com/macros/s/AKfycbytV2u1xLPQqk0rwNSl8i48QtQuE8Z6rtEp1gAtytItex9FSm0cSH14C_gZoHA3NhVXRA/exec"; 
+
+            fetch(scriptURL, { method: "POST", body: formData })
+            .then(response => response.text())
+            .then(data => {
+                console.log("Response from script:", data); 
+                if (data.trim() === "success") {
+                    alert("Login Successful!");
+                    window.location.href = "download.html"; 
+                } else {
+                    document.getElementById("error-message").innerText = "Invalid Username or Password!";
+                }
+            })
+            .catch(error => {
+                console.error("Fetch Error:", error);
+                alert("Error connecting to the server!");
+            });
+        });
+
+
+        document.getElementById("logoutBtn")?.addEventListener("click", function() {
+         
+            alert("You have logged out successfully!");
+            window.location.href = "index.html"; 
+        });
+
+      
+        if (sessionStorage.getItem("isLoggedIn")) {
+            document.getElementById("dashboard").style.display = "block";
+            document.getElementById("loginForm").style.display = "none"; 
+        }
+        sessionStorage.setItem("isLoggedIn", "true");
+
+
+        window.onscroll = function() {
+          if (document.documentElement.scrollTop > 100 || document.body.scrollTop > 100) {
+            window.location.href = "index.html";
+          }
+        };
+      </script>
+</body>
+</html>
