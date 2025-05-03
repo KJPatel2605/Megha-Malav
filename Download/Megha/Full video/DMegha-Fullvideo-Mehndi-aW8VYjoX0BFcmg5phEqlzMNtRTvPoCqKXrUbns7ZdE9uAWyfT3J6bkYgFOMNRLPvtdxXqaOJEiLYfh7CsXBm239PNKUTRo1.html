@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Video 1</title>
+  <link rel="stylesheet" href="styles.4.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Mehndi Megha<h1>
+    </header>
+
+    <main>
+      <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/AruJAiYQs_0?si=A7whZ0tn41nnzmd1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+
+
+      <div class="button-container">
+        <a href="https://youtu.be/AruJAiYQs_0" class="video-button">Youtube link</a> 
+        <a href="https://drive.google.com/file/d/1eeCEdAtcHrXQz4YKxkoHEPynmQBWzUsX/view?usp=drive_link" class="video-button">Download link</a> 
+      </div>
+
+
+      <div class="button-container">
+        <a href="DMegha-Fullvideo-Kankotri-iajcipeopsjfipeasijffpqjec3qjcmq80hefpjq9-wa9fug8ywu9fegf.html" class="video-button"> <<<< Kankorti </a>
+        <a href="DMegha-Fullvideo-diqehfuqhfg8rhf802fugdhjafiufugrWURPFJCDHIPPWRUPFPUWfrhfiar.html" class="video-button">Full Video</a>
+        <a href="DMegha-FullVideo-Engagement-rx2aNwBtX8qCKFeVoLgWyZpTfJO79MULbRnsQXYEPHcFjoA4vJki13dRYTPxCmLAXguM89BdtKExnWYqrFOapNv57JlUh2s.html" class="video-button">Engagement >>>></a>
+      </div> 
+  
+      
+      <div class="back-link">
+        <a href="/Download/download-ehqufuoeqfcnruwefhoedwedvbefgiq43ut9thf8h994fcwbffhuf9h9u0jh9u39fhfcb39fejfijsif.html" class="login-button">Back Main Page</a>
+      </div><br><br>
+      <button id="logoutBtn" class="login-button" >Logout</button>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Elegant Wedding Videos</p>
+    </footer>
+  </div>
+</body>
+</html>
+<script>
+    if (!sessionStorage.getItem("isLoggedIn")) {
+        window.location.href = "/login.html";
+    }
+
+    document.getElementById("logoutBtn").addEventListener("click", function() {
+        sessionStorage.removeItem("isLoggedIn");
+        alert("You have logged out successfully!");
+        window.location.href = "/login.html";
+    });
+
+    document.getElementById("menuToggle").addEventListener("click", function() {
+        document.querySelector(".sidebar").classList.toggle("active");
+    });
+  </script>
+</body>
+</html>
