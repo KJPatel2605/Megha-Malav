@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Videos</title>
+  <link rel="stylesheet" href="styles3.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Megha and Malav</h1>
+      <p class="subheading"><br></p>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>Malav Video</h2>
+            <p>Song</p>
+        </section>
+
+      <section class="video-links">
+        <a href="DMalav-Song-Engagement-ZzYExMztgg11DC2EaJKAEyhziBu1JSHmgNMseW_d4S9vbxednCY6ljGQZ8waPUAe5TWzlZoRWcC37emnFuGvlvRixoNVGK4m8W6vET2EYUSOk1irHEKF1y6ruKoONqYVtIpHflooa0nuidgAQkDS4D.html" class="video-button">Engagement Song</a>
+        <a href="DMalav-Song-HaldiPotrait-i36WEqCizCvfVWmM9Ly2Wn8CUYRnDjtwyVlOEBXxyQdm5NZ0XMxH0fI7CPZJHPrnECVyikfBbHhtOcXky0rkW0kiY82SsVKsu4J6EtXSAEUBIDImTQcBw0ni6F98oVnYCLvmDhpRwDjyiwe4masbZl.html" class="video-button">Haldi Portal Song</a> 
+        <a href="DMalav-Song-RasGarba-EXJpQMKoBXWFTYLgNvCOtZMUboKYJCNAYFLqWgDYTNqDrXYMLvKodNFpTAXKYMBXFLJqWtNEOUYCXMK7LpAYXrpFgWNJC3Tb.html" class="video-button">Ras Garba Song</a> 
+        <a href="DMalav-Song-Megha-Get-Ready-o4QGMb6XKzjRfb7CQx_TgXKiyfKC2RdDGsmqDNUAK0ijjL43HBUizHLDEP_sJr0k8QNVA5s2JX6P2Vs3B48jwIj6jy47w4DxDgPmQsSNyhT6mRpklDk_9GkeEvVhsVA2vTMrWwhpilthLPx0D3NSLx.html" class="video-button">Megha Get Ready Song</a> 
+        <a href="DMalav-Song-Malav-Get-Ready-qFyLlVaCouIkfQufyQ8_F4mDqnFeDTDMSfxbRO1B9UhEgMIY4DL7ga0WkUd3LhVpAkcgLkmiYwHe9BzYiBXuOcNHnjs5HKgSpNKekX8DeVj0tu1klZht5vETnH_tdqA9HbXHllHsFzPkWrymw3pl2Y.html" class="video-button">Malav Get Ready Song</a> 
+        <a href="DMalav-Song-Wedding-Potrait-EYKrPLNoAXWSTYLgNvDPTXMUcoLXKDNBYFLpWgEZUNqCrXYNLvJodKFqTAXKZLBXFLKqWtMEPUYCXMK8LoBYXqpFgWNKC3Qb.html" class="video-button">Wedding Potrait Song</a> 
+
+  
+        <button id="logoutBtn" class="login-button" >Logout</button>
+        <a href="/Download/Malav/DMalav-ahchoedscwsdhucofdOFHDUOWHFUOhsIOHhfuodhoafuohauovhabuofhfhhe89ucew88.html" class="login-button">GO Back</a> 
+        <a href="/Download/download-ehqufuoeqfcnruwefhoedwedvbefgiq43ut9thf8h994fcwbffhuf9h9u0jh9u39fhfcb39fejfijsif.html" class="login-button">Back Main Page</a> 
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Elegant Wedding Videos</p>
+    </footer>
+  </div>
+  <script>
+    if (!sessionStorage.getItem("isLoggedIn")) {
+        window.location.href = "/login.html";
+    }
+
+    document.getElementById("logoutBtn").addEventListener("click", function() {
+        sessionStorage.removeItem("isLoggedIn");
+        alert("You have logged out successfully!");
+        window.location.href = "/login.html";
+    });
+
+    document.getElementById("menuToggle").addEventListener("click", function() {
+        document.querySelector(".sidebar").classList.toggle("active");
+    });
+  </script>
+</body>
+</html>

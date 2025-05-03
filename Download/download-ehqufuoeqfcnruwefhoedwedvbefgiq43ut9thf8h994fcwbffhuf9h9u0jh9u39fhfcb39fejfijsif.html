@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Videos</title>
+  <link rel="stylesheet" href="styles3.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Megha and Malav</h1>
+      <p class="subheading">Welcome <br> You are in Main Page</p>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>Welcome</h2>
+            <p>Download and Watch the video</p>
+        </section>
+
+      <section class="video-links">
+        <a href="Megha/DMegha-anjeoacnuobauodfhssjaofbeuhv8e29cnao93u298cnae39390nci.Html" class="video-button">video Megha</a> 
+        <a href="Malav/DMalav-ahchoedscwsdhucofdOFHDUOWHFUOhsIOHhfuodhoafuohauovhabuofhfhhe89ucew88.html" class="video-button">Video Malav</a>
+        <button id="logoutBtn" class="login-button" >Logout</button>
+        <a href="/index.html" class="login-button">Back Home</a> 
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Elegant Wedding Videos</p>
+    </footer>
+  </div>
+  <script>
+    if (!sessionStorage.getItem("isLoggedIn")) {
+        window.location.href = "login.html";
+    }
+
+    document.getElementById("logoutBtn").addEventListener("click", function() {
+        sessionStorage.removeItem("isLoggedIn");
+        alert("You have logged out successfully!");
+        window.location.href = "/login.html";
+    });
+
+    document.getElementById("menuToggle").addEventListener("click", function() {
+        document.querySelector(".sidebar").classList.toggle("active");
+    });
+  </script>
+</body>
+</html>

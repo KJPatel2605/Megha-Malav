@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Videos</title>
+  <link rel="stylesheet" href="styles3.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Megha and Malav</h1>
+      <p class="subheading"> <br></p>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>Megha Video</h2>
+            <p></p>
+        </section>
+
+      <section class="video-links">
+        <a href="Full video/DMegha-Fullvideo-diqehfuqhfg8rhf802fugdhjafiufugrWURPFJCDHIPPWRUPFPUWfrhfiar.html" class="video-button">Full Video</a>
+        <a href="Highlight/DMegha-Highlight-PCvJr0BXxgoVnTYUb3KNWEFzALMFyhM8pwtfZajqOlEYdUXCo7RQJTbNPl9XsmKcaFgMHXdozvLuRYE51tiWqApTJnkxBY4.html" class="video-button">Highlight</a> 
+        <a href="Song/DMegha-Song-T0uZVnxFJoAYRBvK7EOpdMCyNtXLFgqjmHbWY3olXzPrNKWfiUEx58CtTJQgFaXBYM92rLvpsnOJcWELhqMokygbTuAdx14.html" class="video-button">Song</a> 
+        <a href="Teaser/DMegha-Teaser-T0uZVnxFJoAYRBvK7EOpdMCyNtXLFgqjmHbWY3olXzPrNKWfiUEx58CtTJQgFaXBYM92rLvpsnOJcWELhqMokygbTuAdx14.html" class="video-button">Teaser</a> 
+        <button id="logoutBtn" class="login-button" >Logout</button>
+        <a href="/Download/download-ehqufuoeqfcnruwefhoedwedvbefgiq43ut9thf8h994fcwbffhuf9h9u0jh9u39fhfcb39fejfijsif.html" class="login-button">Back Main Page</a> 
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Elegant Wedding Videos</p>
+    </footer>
+  </div>
+  <script>
+    if (!sessionStorage.getItem("isLoggedIn")) {
+        window.location.href = "/login.html";
+    }
+
+    document.getElementById("logoutBtn").addEventListener("click", function() {
+        sessionStorage.removeItem("isLoggedIn");
+        alert("You have logged out successfully!");
+        window.location.href = "/login.html";
+    });
+
+    document.getElementById("menuToggle").addEventListener("click", function() {
+        document.querySelector(".sidebar").classList.toggle("active");
+    });
+  </script>
+</body>
+</html>
